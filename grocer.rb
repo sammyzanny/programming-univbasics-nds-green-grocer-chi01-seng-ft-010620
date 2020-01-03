@@ -3,7 +3,7 @@ def find_item_by_name_in_collection(name, collection)
   #
   # Consult README for inputs and outputs
   counter = 0 
-  while counter < collection.length 
+  while counter < collection.length do
     if collection[counter][:item] == name
     return collection[counter]
     end
@@ -71,7 +71,7 @@ def apply_clearance(cart)
   #
   # REMEMBER: This method **should** update cart
   counter = 0 
-  while counter < cart.length
+  while counter < cart.length do
     if cart[counter][:clearance]
       cart[counter][:price] = (cart[counter][:price]*0.8).round(2)
     end
@@ -95,7 +95,7 @@ def checkout(cart, coupons)
   final_cart = apply_clearance(coupond,cart)
   total = 0 
   counter = 0 
-  while counter < final_cart.length
+  while counter < final_cart.length do
     total += final_cart[counter][:price] * final_cart[counter][:count]
     counter += 1
   end
